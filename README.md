@@ -18,7 +18,7 @@ At the very beginning I globalize the following variables:
 
 2. map<string, vector\<Transaction\> >purchase_history;
 
-- First I construct a struct named "Transaction", for each id in the log file, including three memberships: timestamp (what time this id make the purchase), record_id (the order of the purchases I set by myself, from the earliest one to the latest one), and the amount of the purchases.
+- First I construct a struct named "Transaction", for each id in the log file, including three memberships: timestamp (what time this id make the purchase), record_id (the order of the purchases I defined by myself, from the earliest one to the latest one, to differentiate transactions with the same timestamps. Since I assume the batch log file is already ordered by timestamp, i.e., from the earliest one to the latest, so here the record_id would be just from 1,2,3,..., to the total number of lines), and the amount of the purchase.
 
         struct Transaction
      
