@@ -12,9 +12,9 @@ At the very beginning I globalize the following three variables:
 
 1. map<string, set\<string\> >social_network;
 
-   In the log file, each id is considered as a string type, and can connect to multiple other ids to form a social network.
+* In the log file, each id is considered as a string type, and can connect to multiple other ids to form a social network.
 
-   Therefore here I use a C++ STL map<string, set\<string\> > structure to store social network information.
+* Therefore here I use a C++ STL map<string, set\<string\> > structure to store social network information.
 
 2. map<string, vector\<Transaction\> >purchase_history;
 
