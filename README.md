@@ -60,13 +60,17 @@ Step 1: Read in the "batch_log.json":
     
     if "event_type" is "unfriend", delete a connection in the social network;
     
-    if "event_type" is "purchase",
+    if "event_type" is "purchase", add transaction information (timestamp, record_id, amount) for an id.
+    
+Step 2: Read in the ""
+- For each of other lines,
+    if "event_type" is "befriend", add a connection in the social network;
+    
+    if "event_type" is "unfriend", delete a connection in the social network;
+    
+    if "event_type" is "purchase", add transaction information (timestamp, record_id, amount) for an id.
     
     
-
-
-
-
 
 ## Functions of files in the "src" folder
 
