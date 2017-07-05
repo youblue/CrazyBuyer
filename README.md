@@ -79,23 +79,17 @@ Step 2: Read in the "stream_log.json":
 
 ## Functions of files in the "src" folder
 
--- main.cpp
+- main.cpp: main functions, read in log files, call other functions
 
--- utils.cpp
+- utils.cpp: core utility functions and data structure definitions
 
--- json.hpp
+- json.hpp: a header file enable me to read "JSON" file, see "Acknowledgement"
 
--- Common.h
+- Common.h: a header file contains most often used precompiled headers
 
--- CrazyBuyer
+- CrazyBuyer: executable file
 
--- Makefile
-
-
-1. Read in batch log data:
-
-
-
+- Makefile: Makefile
 
 
 ## Acknowledgement
