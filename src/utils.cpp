@@ -7,6 +7,7 @@ int jsonToInteger(json j) {
 	return i;
 }
 
+// Transaction for each ID
 struct Transaction
 {
 	string timestamp;
@@ -14,10 +15,12 @@ struct Transaction
 	float amount;
 };
 
+// Global storage for all IDs / records
 map<string, set<string> >social_network;
 map<string, vector<Transaction> >purchase_history;
 map<int, float>record_amount;
 
+// Add a transaction for an ID
 void addPurchase(string id, string timestamp, int record_id, float amount) {
 	Transaction transac;
 	transac.timestamp = timestamp;
@@ -27,6 +30,7 @@ void addPurchase(string id, string timestamp, int record_id, float amount) {
 	purchase_history[id].push_back(transac);
 }
 
+// Given an ID, search to obtain its D-layer social-network
 set<string> searchNeighbors(string id, int D) {
 	int layer = 1;
 	queue<string> q;
@@ -49,8 +53,11 @@ set<string> searchNeighbors(string id, int D) {
 	return friend_set;
 }
 
-
+// Judge if an amount is anomaly, if yes, calculate mean and std
 bool flagAnomaly(float amount, set<string>& friend_set, int T, float& mean, float& sd) {
+	if (T < 2)
+		return false;
+	
 	vector<int> friend_record_vec;
 	vector<float> friend_amount_vec;
 

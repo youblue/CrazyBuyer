@@ -1,7 +1,6 @@
 // main.cpp : Defines the entry point for the console application.
 //
 
-//#include "stdafx.h"
 #include "Common.h"
 #include "utils.cpp"
 
@@ -11,7 +10,7 @@ int main(int argc, char* argv[])
 	char* stream_filename = argv[2];
 	char* output_filename = argv[3];
 
-	// 1. initializeSocialNetwork
+	// 1. Read in batch log data
 	ifstream batch_file(batch_filename);
 
 	// 1.1 Parse first line and get D and T
@@ -26,6 +25,16 @@ int main(int argc, char* argv[])
 	stream >> j;
 	int D = jsonToInteger(j["D"]);
 	int T = jsonToInteger(j["T"]);
+
+	// Consider either D or T < 1, need user inputs
+	while (D < 1) {
+		cout << "D is < 1, enter a new D:" << endl;
+		cin >> D;
+	}
+	while (T < 1) {
+		cout << "T is < 1, enter a new T:" << endl;
+		cin >> T;
+	}
 
 	// 1.2 Build network (from the second line)
 	string batch_line;
@@ -129,12 +138,11 @@ int main(int argc, char* argv[])
 
 			if (flag) {
 				ofstream of(output_filename, ios::app);
-				//of << id << "\t" << amount << "\t" << mean << "\t" << sd << endl;
 				of << "{\"event_type\":\"purchase\", \"timestamp\":\""
-					<< timestamp << "\", \"id\": \""
-					<< id << "\", \"amount\": \""
-					<< amount_str << "\", \"mean\": \""
-					<< fixed << setprecision(2) << (int)(mean * 100) / 100.0 << "\", \"sd\": \""
+					<< timestamp << "\", \"id\":\""
+					<< id << "\", \"amount\":\""
+					<< amount_str << "\", \"mean\":\""
+					<< fixed << setprecision(2) << (int)(mean * 100) / 100.0 << "\", \"sd\":\""
 					<< fixed << setprecision(2) << (int)(sd * 100) / 100.0 << "\"}";
 				if(!stream_file.eof())
 					of << endl;

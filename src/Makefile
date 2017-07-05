@@ -1,5 +1,5 @@
 CPP = g++
-EXE = main
+EXE = CrazyBuyer
 OBJ = main.o
 CFLAGS =  -ansi -pedantic -std=c++11 -ggdb -c
 
