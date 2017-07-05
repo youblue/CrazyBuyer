@@ -42,9 +42,7 @@ At the very beginning I globalize the following variables:
 
 ### Algorithm
 
-1. One of the core questions is:
-
-Based on an existing social network built using past data (batch log file), from each transaction in the stream log file, given an id, how to search to obtain its D-layer social-network (or friends)?
+1. One of the core questions is: Based on an existing social network built using past data (batch log file), from each transaction in the stream log file, given an id, how to search to obtain its D-layer social-network (or friends)?
 
 - Here we choose the standard Bread First Search (BFS) algorithm, and stop searching when we already find the D-layer social-network.
 
