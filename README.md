@@ -62,15 +62,20 @@ Step 1: Read in the "batch_log.json":
     
     if "event_type" is "purchase", add transaction information (timestamp, record_id, amount) for an id.
     
-Step 2: Read in the ""
+Step 2: Read in the "stream_log.json":
 - For each of other lines,
     if "event_type" is "befriend", add a connection in the social network;
     
     if "event_type" is "unfriend", delete a connection in the social network;
     
-    if "event_type" is "purchase", add transaction information (timestamp, record_id, amount) for an id.
+    if "event_type" is "purchase", then take the following actions:
     
+    (1) search D-layer neighbors of current id
     
+    (2) flag anomaly
+    
+    (3) update purchase_history by adding new transaction
+   
 
 ## Functions of files in the "src" folder
 
