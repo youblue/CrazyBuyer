@@ -11,7 +11,11 @@ Any of the detected "anomaly" who purchases much more than the average of his/he
 At the very beginning I globalize the following three variables:
 
 1. map<string, set<string> >social_network;
--- To 
+
+-- In the log file, each id is considered as a string type, and can connect to multiple other ids to form a social network.
+
+-- Therefore here I use a C++ STL map<string, set<string> > structure
+
 2. map<string, vector<Transaction> >purchase_history;
 
 3. map<int, float>record_amount;
@@ -23,6 +27,9 @@ Step 1: Read in the "batch_log.json":
 -- The first line is "D" and "T"
 -- For each of other lines,
 ---- if "event_type" is "befriend", then 
+
+## Algorithm
+
 
 
 ## Functions of files in the "src" folder
