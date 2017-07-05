@@ -26,9 +26,9 @@ At the very beginning I globalize the following variables:
   
           string timestamp;
 	
-	     int record_id;
+	      int record_id;
 	
-	     float amount;
+	      float amount;
 	
         };
 
