@@ -1,6 +1,6 @@
 # CrazyBuyer
 
-This program is for insight data engineer challenge of "Anomaly Detection".
+This program is for Insight data engineer challenge of "Anomaly Detection".
 
 More details about the problem set up please refer to: https://github.com/InsightDataScience/anomaly_detection.
 
