@@ -40,8 +40,9 @@ At the very beginning I globalize the following variables:
 
 
 
-## Algorithm
+### Algorithm
 
+--- Bread First Search
 
 The step-by-step implementations of CrazyBuyer is as follows:
 Step 0: At the very beginning initialize
