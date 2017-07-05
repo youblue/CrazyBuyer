@@ -42,10 +42,20 @@ At the very beginning I globalize the following variables:
 
 ### Algorithm
 
---- Bread First Search
+1. One of the core questions is:
 
-The step-by-step implementations of CrazyBuyer is as follows:
-Step 0: At the very beginning initialize
+Based on an existing social network built using past data (batch log file), from each transaction in the stream log file, given an id, how to search to obtain its D-layer social-network (or friends)?
+
+Here we choose the Bread First Search (BFS) algorithm.
+
+- Bread First Search
+
+
+
+
+
+### Step-by-step implementations
+
 Step 1: Read in the "batch_log.json":
 -- The first line is "D" and "T"
 -- For each of other lines,
