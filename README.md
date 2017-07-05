@@ -46,12 +46,9 @@ At the very beginning I globalize the following variables:
 
 Based on an existing social network built using past data (batch log file), from each transaction in the stream log file, given an id, how to search to obtain its D-layer social-network (or friends)?
 
-Here we choose the Bread First Search (BFS) algorithm.
+- Here we choose the standard Bread First Search (BFS) algorithm, and stop searching when we already find the D-layer social-network.
 
-- Bread First Search
-
-
-
+2. Another one is that, for each id in the stream log file, after we have searched and collected all its D-layer friends, we needs to prioritize them by timestamp, and choose at most the latest T transactions (If the total number of friends < T, then just involve all of them, otherwise just keep the latest T. If T < 2, then directly flag the stream transaction as not an anomaly).
 
 
 ### Step-by-step implementations
