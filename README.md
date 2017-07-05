@@ -34,8 +34,13 @@ At the very beginning I globalize the following variables:
 
 - Since each id can make multiple transactions, so here I use a C++ STL map<string, vector\<Transaction\> > structure to store for each id, its historical purchase information.
 
-
 3. map<int, float>record_amount;
+
+- Here for each record_id (which represents a unique transaction, see definition as above), I use a STL map<int, float> structure to store mapping relationship of record_id and amount. 
+
+
+
+## Algorithm
 
 
 The step-by-step implementations of CrazyBuyer is as follows:
@@ -45,7 +50,7 @@ Step 1: Read in the "batch_log.json":
 -- For each of other lines,
 ---- if "event_type" is "befriend", then 
 
-## Algorithm
+
 
 
 
