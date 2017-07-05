@@ -1,6 +1,10 @@
 # CrazyBuyer
 
-This program is for insight data engineer challenge of "Anomaly Detection". More details about the problem set up please refer to: https://github.com/InsightDataScience/anomaly_detection. Any of the final detected "anomaly" who makes much more purchases than average of his/her friends, for me, is better called "CrazyBuyer".
+This program is for insight data engineer challenge of "Anomaly Detection".
+
+More details about the problem set up please refer to: https://github.com/InsightDataScience/anomaly_detection.
+
+Any of the final detected "anomaly" who makes much more purchases than average of his/her friends, for me, is better called "CrazyBuyer" :)
 
 ## Summary of approach
 ### Data structure
