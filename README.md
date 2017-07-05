@@ -32,7 +32,7 @@ At the very beginning I globalize the following variables:
 	
         };
 
-- Since each id can make multiple transactions, so here I use a C++ STL map<string, vector\<Transaction\> > structure to store for each id, it's historical purchase information.
+- Since each id can make multiple transactions, so here I use a C++ STL map<string, vector\<Transaction\> > structure to store for each id, its historical purchase information.
 
 
 3. map<int, float>record_amount;
