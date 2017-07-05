@@ -21,13 +21,13 @@ At the very beginning I globalize the following variables:
 - First I construct a struct named "Transaction", for each id in the log file, including three memberships: timestamp (what time this id make the purchase), record_id (the order of the purchases I set by myself, from the earliest one to the latest one), and the amount of the purchases.
 
      struct Transaction
-     
-    \{
+    {
+    
 	string timestamp;	
 	int record_id;
 	float amount;
 	
-     \};
+     };
 
 - Therefore here I use a C++ STL map<string, vector\<Transaction\> > structure to store social network information.
 
