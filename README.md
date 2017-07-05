@@ -48,6 +48,8 @@ At the very beginning I globalize the following variables:
 
 2. Another one is that, for each id in the stream log file, after we have searched and collected all its D-layer friends, we needs to prioritize them by timestamp, and choose at most the latest T transactions (If the total number of friends < T, then just involve all of them, otherwise just keep the latest T. If T < 2, then directly flag the stream transaction as not an anomaly).
 
+- Since I have given each transaction a unique id (record_id) instead of using timestamp, this process is very easy. Just first extract all the Transactions of the id's social_network from "purchase_history" mapping relationship from id to transaction, then for every transaction I can obtain the corresponding "record_id" because "record_id" is a member of struct "Transaction". Next I sorted these "record_ids" from smallest to the largest, because smaller "record_id" represents earlier timestamp. Finally use "record_amount" mapping to extract the amount corresponding to those sorted "record_id".
+
 
 ### Step-by-step implementations
 
