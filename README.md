@@ -8,7 +8,7 @@ Any of the detected "anomaly" who purchases much more than the average of his/he
 
 ## Summary of approach
 ### Data structure
-At the very beginning I globalize the following three variables:
+At the very beginning I globalize the following variables:
 
 1. map<string, set\<string\> >social_network;
 
@@ -17,6 +17,18 @@ At the very beginning I globalize the following three variables:
 - Therefore here I use a C++ STL map<string, set\<string\> > structure to store social network information.
 
 2. map<string, vector\<Transaction\> >purchase_history;
+
+- First I construct a struct named "Transaction", for each id in the log file, including three memberships: timestamp (what time this id make the purchase), record_id (the order of the purchases I set by myself, from the earliest one to the latest one), and the amount of the purchases.
+
+// Transaction for each ID
+struct Transaction
+{
+	string timestamp;
+	int record_id;
+	float amount;
+};
+
+- Therefore here I use a C++ STL map<string, vector\<Transaction\> > structure to store social network information.
 
 
 3. map<int, float>record_amount;
